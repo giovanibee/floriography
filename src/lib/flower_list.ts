@@ -8,32 +8,32 @@ export const flowers: {
   daisy: {
     title: "Daisy",
     image: "images/daisy.png",
-    meaning: "Innocence, purity, new beginnings, and true love.",
+    meaning: "Is there something that you genuinely enjoy that you've been putting off?",
   },
   rose: {
     title: "Rose",
     image: "images/rose.png",
-    meaning: "Love, passion, beauty, and desire.",
+    meaning: "Romance is in the air~",
   },
   tulip: {
     title: "Tulip",
     image: "images/tulip.png",
-    meaning: "Perfect love, fame, and fortune.",
+    meaning: "You are on the right path, keep going!",
   },
   sunflower: {
     title: "Sunflower",
     image: "images/sunflower.png",
-    meaning: "Adoration, loyalty, and longevity.",
+    meaning: "It's time to shine!",
   },
   lily: {
     title: "Lily",
     image: "images/lily.png",
-    meaning: "Purity, fertility, and rebirth.",
+    meaning: "Today is a good day to let something go",
   },
   orchid: {
     title: "Orchid",
     image: "images/orchid.png",
-    meaning: "Love, beauty, and strength.",
+    meaning: "Dress yourself in something that makes you feel confident today.",
   },
   // iris: {
   //   title: "Iris",
@@ -48,12 +48,12 @@ export const flowers: {
   hyacinth: {
     title: "Hyacinth",
     image: "images/hyacinth.png",
-    meaning: "Sincerity, stability, and constancy.",
+    meaning: "Your hard work will pay off, don't worry :)",
   },
   lilac: {
     title: "Lilac",
     image: "images/lilac.png",
-    meaning: "Youthful innocence and confidence.",
+    meaning: "Return to something you enjoyed as a child",
   },
   // marigold: {
   //   title: "Marigold",
@@ -68,7 +68,7 @@ export const flowers: {
   jasmine: {
     title: "Jasmine",
     image: "images/jasmine.png",
-    meaning: "Love, beauty, and sensuality.",
+    meaning: "Today is a good day to create art",
   },
   // violet: {
   //   title: "Violet",
@@ -93,7 +93,7 @@ export const flowers: {
   anemone: {
     title: "Anemone",
     image: "images/anemone.png",
-    meaning: "Anticipation, protection, and healing.",
+    meaning: "Practice setting boundaries today",
   },
   // "calla lily": {
   //   title: "Calla Lily",
@@ -113,7 +113,7 @@ export const flowers: {
   gladiolus: {
     title: "Gladiolus",
     image: "images/gladiolus.png",
-    meaning: "Strength, integrity, and infatuation.",
+    meaning: "Today is a good day to strengthen a bond with someone.",
   },
   // "sweet pea": {
   //   title: "Sweet Pea",
@@ -128,7 +128,7 @@ export const flowers: {
   bluebell: {
     title: "Bluebell",
     image: "images/bluebell.png",
-    meaning: "Humility, gratitude, and everlasting love.",
+    meaning: "Be on the lookout for a new opportunity today",
   },
   // aster: {
   //   title: "Aster",
