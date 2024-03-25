@@ -1,0 +1,67 @@
+@mixin hide-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.oracle-card-container {
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px 1px rgba(0, 0, 0, 0.6);
+  margin-top: 28px;
+  position: relative;
+  perspective: 600px;
+  transform-origin: center right;
+  transition: transform 1s;
+
+  &-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+  }
+
+  &-fade-away {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+}
+
+.oracle-card {
+  @include hide-back;
+  border-radius: 14px;
+  mask-image: linear-gradient(to bottom,
+    rgba(0,0,0.98), rgba(0,0,0,0.9), rgba(0,0,0,0.6), rgba(0,0,0,0.96), rgba(0,0,0,1)
+  );
+
+  position: relative;
+  height: 340px;
+  width: 220px;
+
+  &-back, &-front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  &-front {
+    background-color: white;
+    transform: rotateY(180deg);
+    z-index: 1;
+  }
+
+  // &-flipped {
+  //   transform: translateX(-100%) rotateY(-180deg);
+  // }
+
+  &-back {
+    background-image: url('../lib/images/card_bg_pattern.png');
+    cursor: pointer;
+    object-fit: cover;
+  }
+}
+
+.flower-image {
+  background-color: rgba(256,256,256, 0.7);
+  height: 156px;
+  padding-bottom: 7px;
+  margin-bottom: 7px;
+  object-fit: contain;
+  width: 112px;
+}
