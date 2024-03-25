@@ -2,17 +2,12 @@
 
 .oracle-card-container {
   background-color: white;
-  border: 2px solid rgba(256,256,256, 0.2);
   border-radius: 14px;
-  box-shadow: 0 7px 10px 0px rgba(0, 0, 0, 0.7);
-
-  height: 340px;
-  width: 220px;
   margin-top: 28px;
   position: relative;
-  transform-style: preserve-3d;
-  transform-origin: center right;
-  transition: transform 1s;
+  height: 340px;
+  width: 220px;
+  overflow: visible;  
   
   &-center {
     // display: block;
@@ -30,29 +25,40 @@
 }
 
 .oracle-card {
+  border: 2px solid rgba(256,256,256, 0.2);
   border-radius: 14px;
-  mask-image: linear-gradient(to bottom,
-    rgba(0,0,0.98), rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0.96), rgba(0,0,0,1)
-  );
+  box-shadow: 0 7px 10px 0px rgba(0, 0, 0, 0.7);
 
-  &, &-front, &-back {
+  perspective: 1000px;
+  transform-origin: center right;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+
+  &-front, &-back {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
   }
 
-  &-container-flipped .oracle-card-back {
+  &-container-flipped &-back {
     transform: translateX(-100%) rotateY(180deg);
+  }
+
+  &-container-unflipped &-front {
+    display: none;
+  }
+
+  &-container-flipped &-front {
+    display: inherit;
   }
 
   &-front {
     background-color: white;
-    // transform: rotateY(180deg);
   }
 
   &-back {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
     background-image: url('../lib/images/card_bg_pattern.jpg');
     background-size: contain;
     cursor: pointer;

@@ -26,10 +26,11 @@ export const OracleCard: React.FC<OracleCardProps> = ({
   
   return (
     <div
-      className={`oracle-card-container ${isFlipped ? 'oracle-card-container-flipped' : ''}`} id={id}
+      className={`oracle-card-container ${isFlipped ? 'oracle-card-container-flipped' : 'oracle-card-container-unflipped'}`}
+      id={id}
       key={key}
     >
-     {isFlipped && <div className='oracle-card oracle-card-front'>
+      <div className='oracle-card oracle-card-front'>
         <h1>{title}</h1>
         <img
           className='flower-image'
@@ -37,7 +38,7 @@ export const OracleCard: React.FC<OracleCardProps> = ({
           alt={title}
         />
         <p>{meaning}</p>
-      </div>}
+      </div>
       <div className='oracle-card oracle-card-back'  onClick={flipCard} />
     </div>
   )
