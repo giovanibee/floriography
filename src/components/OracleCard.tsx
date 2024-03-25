@@ -34,7 +34,7 @@ export const OracleCard: React.FC<OracleCardProps> = ({
         onClick={isFlipped ? undefined : flipCard}
       >
         <div className='oracle-card-front'>
-          <p>{title}</p>
+          <h1>{title}</h1>
           <img
             className='flower-image'
             src={image}

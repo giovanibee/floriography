@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { OracleCard } from './OracleCard';
 import './OracleReader.scss';
 
@@ -18,14 +18,17 @@ export const OracleReader: React.FC = () => {
     const cards = document.getElementsByClassName('oracle-card-container');
     if (!cards) return
     Array.from(cards).forEach((card) => {
-      if (card.id === `card-${cardSelected}`) return;
+      if (card.id === `card-${cardSelected}`) {
+        card.classList.add('oracle-card-container-center');
+        return;
+      }
       card.classList.add('oracle-card-container-fade-away');
     })
   }, [cardSelected]);
 
   return (
     <div>
-      <h1>
+      <h1 className='page-title'>
         Floriography
       </h1>
       <h3>
