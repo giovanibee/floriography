@@ -1,7 +1,10 @@
+// TODO: Flip card animation is busted--need to fix
+
 .oracle-card-container {
   background-color: white;
+  border: 2px solid rgba(256,256,256, 0.2);
   border-radius: 14px;
-  box-shadow: 0 5px 18px 1px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 7px 10px 0px rgba(0, 0, 0, 0.7);
 
   height: 340px;
   width: 220px;
@@ -10,10 +13,6 @@
   transform-style: preserve-3d;
   transform-origin: center right;
   transition: transform 1s;
-
-  &-flipped {
-    transform: translateX(-100%) rotateY(-180deg);
-  }
   
   &-center {
     // display: block;
@@ -26,16 +25,14 @@
   &-fade-away {
     transform: translateY(100%);
     opacity: 0;
-    transition: transform 2s, opacity 2s;
+    transition: all 2s;
   }
 }
 
 .oracle-card {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   border-radius: 14px;
   mask-image: linear-gradient(to bottom,
-    rgba(0,0,0.98), rgba(0,0,0,0.9), rgba(0,0,0,0.6), rgba(0,0,0,0.96), rgba(0,0,0,1)
+    rgba(0,0,0.98), rgba(0,0,0,0.9), rgba(0,0,0,0.7), rgba(0,0,0,0.96), rgba(0,0,0,1)
   );
 
   &, &-front, &-back {
@@ -44,15 +41,21 @@
     width: 100%;
   }
 
+  &-container-flipped .oracle-card-back {
+    transform: translateX(-100%) rotateY(180deg);
+  }
+
   &-front {
     background-color: white;
-    transform: rotateY(180deg);
+    // transform: rotateY(180deg);
   }
 
   &-back {
-    background-image: url('../lib/images/card_bg_pattern.png');
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-image: url('../lib/images/card_bg_pattern.jpg');
+    background-size: contain;
     cursor: pointer;
-    object-fit: cover;
   }
 
   p {
