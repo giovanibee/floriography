@@ -1,7 +1,4 @@
-// TODO: I messed up the card flipping animation and need to redo some parts of it.
-
 .oracle-card-container {
-  background-color: white;
   border-radius: 14px;
   margin-top: 28px;
   position: relative;
@@ -26,23 +23,27 @@
 
 .oracle-card {
   border: 2px solid rgba(256,256,256, 0.2);
-  border-radius: 14px;
   box-shadow: 0 7px 10px 0px rgba(0, 0, 0, 0.7);
 
   perspective: 1000px;
+  position: relative;
   transform-origin: center right;
   transform-style: preserve-3d;
   transition: transform 1s;
+
+  &, &-front, &-back {
+    border-radius: 14px;
+    height: 100%;
+    width: 100%;
+  }
 
   &-front, &-back {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     position: absolute;
-    height: 100%;
-    width: 100%;
   }
 
-  &-container-flipped &-back {
+  &-container-flipped & {
     transform: translateX(-100%) rotateY(180deg);
   }
 
@@ -52,6 +53,7 @@
 
   &-container-flipped &-front {
     display: inherit;
+    transform: rotateY(180deg);
   }
 
   &-front {
@@ -62,6 +64,7 @@
     background-image: url('../lib/images/card_bg_pattern.jpg');
     background-size: contain;
     cursor: pointer;
+    z-index: 1;
   }
 
   p {

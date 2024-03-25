@@ -30,16 +30,18 @@ export const OracleCard: React.FC<OracleCardProps> = ({
       id={id}
       key={key}
     >
-      <div className='oracle-card oracle-card-front'>
-        <h1>{title}</h1>
-        <img
-          className='flower-image'
-          src={image}
-          alt={title}
-        />
-        <p>{meaning}</p>
+      <div className='oracle-card'>
+        <div className='oracle-card-back'  onClick={flipCard} />
+        <div className='oracle-card-front'>
+          <h1>{title}</h1>
+          <img
+            className='flower-image'
+            src={image}
+            alt={title}
+          />
+          <p>{meaning}</p>
+        </div>
       </div>
-      <div className='oracle-card oracle-card-back'  onClick={flipCard} />
     </div>
   )
 }
