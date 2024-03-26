@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/floriography/static/css/main.a1b0a319.css",
-    "main.js": "/floriography/static/js/main.7aaec12d.js",
+    "main.js": "/floriography/static/js/main.113ae6aa.js",
     "static/media/card_bg_pattern.jpg": "/floriography/static/media/card_bg_pattern.8e85d3316253f5952352.jpg",
     "static/media/bg_pattern.webp": "/floriography/static/media/bg_pattern.6544114360fbbbce4a7f.webp",
     "index.html": "/floriography/index.html",
     "main.a1b0a319.css.map": "/floriography/static/css/main.a1b0a319.css.map",
-    "main.7aaec12d.js.map": "/floriography/static/js/main.7aaec12d.js.map"
+    "main.113ae6aa.js.map": "/floriography/static/js/main.113ae6aa.js.map"
   },
   "entrypoints": [
     "static/css/main.a1b0a319.css",
-    "static/js/main.7aaec12d.js"
+    "static/js/main.113ae6aa.js"
   ]
 }

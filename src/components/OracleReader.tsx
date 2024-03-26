@@ -32,11 +32,8 @@ export const OracleReader: React.FC = () => {
         Floriography
       </h1>
       <h3>
-        A language of flowers
-      </h3>
-      <p>
         Pick a card to get your daily flower reading.
-      </p>
+      </h3>
       <div id='card-options'>
         {randomCards.map((card, key) => (
           <OracleCard
