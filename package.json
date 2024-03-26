@@ -1,5 +1,6 @@
 {
   "name": "floriography",
+  "homepage": "https://giovanibee.github.io/floriography",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
